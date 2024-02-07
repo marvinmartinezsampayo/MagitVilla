@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-//video de You tube https://www.youtube.com/watch?v=OuiExAqVapk minuto 1:44:27
+//video de You tube https://www.youtube.com/watch?v=OuiExAqVapk&ab_channel=BaezStoneCreators minuto 2:37:23
 
 namespace MagicVilla_Api.Controllers
 {
