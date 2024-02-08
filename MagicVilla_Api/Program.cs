@@ -1,3 +1,4 @@
+using MagicVilla_Api;
 using MagicVilla_Api.Datos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -17,6 +18,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(option =>
 {
     option.UseOracle(builder.Configuration.GetConnectionString("ConexionOracle"));
 });
+
+builder.Services.AddAutoMapper(typeof(MappingConfig));
 
 var app = builder.Build();
 
