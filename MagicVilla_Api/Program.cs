@@ -1,5 +1,7 @@
 using MagicVilla_Api;
 using MagicVilla_Api.Datos;
+using MagicVilla_Api.Repositorio;
+using MagicVilla_Api.Repositorio.IRepositorio;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using System.Configuration;
@@ -20,6 +22,9 @@ builder.Services.AddDbContext<ApplicationDBContext>(option =>
 });
 
 builder.Services.AddAutoMapper(typeof(MappingConfig));
+
+builder.Services.AddScoped<IVillaRepositorio, VillaRepositorio>();
+builder.Services.AddScoped<INumeroVillaRepositorio, NumeroVillaRepositorio>();
 
 var app = builder.Build();
 
